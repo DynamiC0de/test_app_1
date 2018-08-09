@@ -60,6 +60,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decreaseCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -106,15 +112,35 @@ class _MyHomePageState extends State<MyHomePage> {
             new Text(
               '${fibonacci(_counter)}',
               style: Theme.of(context).textTheme.display1,
-            )
+            ),
+            new Padding(
+                padding: new EdgeInsets.all(8.0),
+                child:
+                new RaisedButton(
+                onPressed: _incrementCounter,
+                splashColor: Colors.green,
+                padding: new EdgeInsets.all(8.0),
+                child:
+                new Text (
+                  'Increment counter',
+                ),
+              ),
+            ),
+            new Padding(
+              padding: new EdgeInsets.all(8.0),
+              child:
+                new RaisedButton(
+                onPressed: _decreaseCounter,
+                splashColor: Colors.red,
+                  child:
+                  new Text (
+                    'Decrease counter',
+                ),
+              ),
+            ),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
