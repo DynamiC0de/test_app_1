@@ -114,17 +114,16 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display1,
             ),
             new Padding(
-                padding: new EdgeInsets.all(8.0),
-                child:
+              padding: new EdgeInsets.all(8.0),
+              child:
                 new RaisedButton(
                 onPressed: _incrementCounter,
                 splashColor: Colors.green,
-                padding: new EdgeInsets.all(8.0),
                 child:
-                new Text (
-                  'Increment counter',
+                  new Text (
+                    'Increment counter',
+                  ),
                 ),
-              ),
             ),
             new Padding(
               padding: new EdgeInsets.all(8.0),
@@ -132,11 +131,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 new RaisedButton(
                 onPressed: _decreaseCounter,
                 splashColor: Colors.red,
-                  child:
+                child:
                   new Text (
                     'Decrease counter',
+                  ),
                 ),
-              ),
             ),
           ],
         ),
