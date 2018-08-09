@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'Flutter Fibonacci Demo'),
     );
   }
 }
@@ -44,6 +44,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  int fibonacci(int n) {
+    return n < 2 ? n : (fibonacci(n - 1) + fibonacci(n - 2 ));
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -96,6 +100,13 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            new Text(
+              'Fibonacci number:'
+            ),
+            new Text(
+              '${fibonacci(_counter)}',
+              style: Theme.of(context).textTheme.display1,
+            )
           ],
         ),
       ),
