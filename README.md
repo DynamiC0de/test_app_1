@@ -4,4 +4,4 @@ Flutter test app
 
 ## Getting Started
 
-[documentation](https://flutter.io/).
+[Flutter documentation](https://flutter.io/).
